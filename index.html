@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paulo Rojas</title>
+  <meta name="description" content="Paulo Rojas — computer science undergrad at UC San Diego.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Paulo Rojas</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Hi, I'm Paulo.</h1>
+      <p class="lede">Computer science undergrad at UC San Diego.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <!-- TODO: replace with your own bio -->
+      <p>I'm a CS student at UCSD who likes building things, from low-level systems projects to full-stack web apps.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <a href="https://github.com/paulo8rojas/JobTracker">JobTracker</a>
+          <p>A full-stack job application tracker built with FastAPI, SQLModel, and React.</p>
+        </li>
+        <li>
+          <a href="https://github.com/paulo8rojas/wordle-widget">wordle-widget</a>
+          <p>A Wordle widget for Übersicht that pulls the daily puzzle and plays right on your desktop.</p>
+        </li>
+        <li>
+          <a href="https://github.com/paulo8rojas/cpu-cache-sim">cpu-cache-sim</a>
+          <p>A CPU cache simulator written in Rust.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Find me on <a href="https://github.com/paulo8rojas">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Paulo Rojas</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
