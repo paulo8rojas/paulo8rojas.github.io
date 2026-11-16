@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paulo Rojas</title>
   <meta name="description" content="Paulo Rojas — computer science undergrad at UC San Diego.">
+  <meta name="theme-color" content="#0e1411">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">Paulo Rojas</a>
+    <a class="brand" href="#top">P.ROJAS</a>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -17,39 +21,56 @@
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <h1>Hi, I'm Paulo.</h1>
-      <p class="lede">Computer science undergrad at UC San Diego.</p>
-    </section>
+  <div class="hero" id="top">
+    <canvas id="scene" width="240" height="100" aria-hidden="true"></canvas>
+    <div class="hero-text">
+      <p class="eyebrow">Day 001 &middot; San Diego, CA</p>
+      <h1>Paulo Rojas</h1>
+      <p class="lede">Computer science undergrad at UC San Diego<span class="cursor">_</span></p>
+    </div>
+  </div>
 
+  <main>
     <section id="about">
-      <h2>About</h2>
-      <!-- TODO: replace with your own bio -->
-      <p>I'm a CS student at UCSD who likes building things, from low-level systems projects to full-stack web apps.</p>
+      <h2><span class="num">01</span> About</h2>
+      <div class="panel">
+        <!-- TODO: replace with your own bio -->
+        <p>I'm a CS student at UCSD who likes building things, from low-level systems projects to full-stack web apps.</p>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2><span class="num">02</span> Projects</h2>
       <ul class="projects">
-        <li>
-          <a href="https://github.com/paulo8rojas/JobTracker">JobTracker</a>
+        <li class="panel">
+          <div class="item-head">
+            <a href="https://github.com/paulo8rojas/JobTracker">JobTracker</a>
+            <span class="tag">Python / React</span>
+          </div>
           <p>A full-stack job application tracker built with FastAPI, SQLModel, and React.</p>
         </li>
-        <li>
-          <a href="https://github.com/paulo8rojas/wordle-widget">wordle-widget</a>
+        <li class="panel">
+          <div class="item-head">
+            <a href="https://github.com/paulo8rojas/wordle-widget">wordle-widget</a>
+            <span class="tag">Desktop widget</span>
+          </div>
           <p>A Wordle widget for Übersicht that pulls the daily puzzle and plays right on your desktop.</p>
         </li>
-        <li>
-          <a href="https://github.com/paulo8rojas/cpu-cache-sim">cpu-cache-sim</a>
+        <li class="panel">
+          <div class="item-head">
+            <a href="https://github.com/paulo8rojas/cpu-cache-sim">cpu-cache-sim</a>
+            <span class="tag">Rust</span>
+          </div>
           <p>A CPU cache simulator written in Rust.</p>
         </li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Find me on <a href="https://github.com/paulo8rojas">GitHub</a>.</p>
+      <h2><span class="num">03</span> Contact</h2>
+      <div class="panel">
+        <p>Find me on <a href="https://github.com/paulo8rojas">GitHub</a>.</p>
+      </div>
     </section>
   </main>
 
@@ -57,6 +78,7 @@
     <p>&copy; <span id="year">2026</span> Paulo Rojas</p>
   </footer>
 
+  <script src="scene.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
