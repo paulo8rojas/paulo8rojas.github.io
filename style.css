@@ -26,6 +26,26 @@ body {
   -webkit-font-smoothing: none;
 }
 
+/* backdrop: hard-stepped dusk haze rising from the bottom, with a faint
+   checkerboard dither over it. Pure CSS, fixed behind the page. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    repeating-conic-gradient(rgba(0, 0, 0, 0.16) 0% 25%, transparent 0% 50%) 0 0 / 8px 8px,
+    linear-gradient(
+      to bottom,
+      #0e1411 0 40%,
+      #111a15 40% 56%,
+      #15201a 56% 70%,
+      #1a2820 70% 82%,
+      #203026 82% 92%,
+      #27392c 92% 100%
+    );
+}
+
 ::selection { background: var(--moss); color: var(--bg); }
 
 a { color: var(--moss); text-decoration: none; }
@@ -69,29 +89,14 @@ nav a:hover::before, nav a:focus-visible::before {
 /* ---------- hero ---------- */
 
 .hero {
-  position: relative;
   border-top: var(--px) solid var(--line);
   border-bottom: var(--px) solid var(--line);
-  background: #1a2420;
-  overflow: hidden;
-}
-
-#scene {
-  display: block;
-  width: 100%;
-  height: clamp(380px, 46vw, 520px);
-  object-fit: cover;
-  object-position: bottom;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
 }
 
 .hero-text {
-  position: absolute;
-  inset: 0;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: clamp(28px, 6vw, 64px) 20px 0;
+  padding: clamp(48px, 9vw, 96px) 20px;
   text-shadow: var(--px) var(--px) 0 #0b100d;
 }
 
