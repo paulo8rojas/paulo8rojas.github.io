@@ -5,15 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paulo Rojas</title>
   <meta name="description" content="Paulo Rojas — computer science undergrad at UC San Diego.">
-  <meta name="theme-color" content="#0e1411">
+  <meta name="theme-color" content="#6fb4dc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
+  <!-- Backdrop: an open sky over layered, hazy hills. Fixed behind the page. -->
+  <svg class="backdrop" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5fa9d8"/>
+        <stop offset="0.45" stop-color="#9fd3e6"/>
+        <stop offset="0.72" stop-color="#f5efd6"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#fffbe6" stop-opacity="0.95"/>
+        <stop offset="0.25" stop-color="#fff6cf" stop-opacity="0.55"/>
+        <stop offset="1" stop-color="#fff6cf" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0.45"/>
+      </linearGradient>
+    </defs>
+
+    <rect width="1440" height="900" fill="url(#sky)"/>
+    <circle cx="1080" cy="470" r="330" fill="url(#sun)"/>
+
+    <g class="clouds" fill="#fff">
+      <g opacity="0.8">
+        <ellipse cx="250" cy="250" rx="120" ry="20"/>
+        <ellipse cx="300" cy="234" rx="70" ry="20"/>
+        <ellipse cx="205" cy="240" rx="50" ry="14"/>
+      </g>
+      <g opacity="0.65">
+        <ellipse cx="930" cy="170" rx="150" ry="18"/>
+        <ellipse cx="985" cy="156" rx="80" ry="18"/>
+        <ellipse cx="860" cy="162" rx="60" ry="12"/>
+      </g>
+      <g opacity="0.6">
+        <ellipse cx="1290" cy="330" rx="100" ry="14"/>
+        <ellipse cx="1320" cy="318" rx="55" ry="14"/>
+      </g>
+      <g opacity="0.5">
+        <ellipse cx="600" cy="380" rx="90" ry="11"/>
+        <ellipse cx="640" cy="371" rx="45" ry="10"/>
+      </g>
+    </g>
+
+    <!-- far peaks, fading into the haze -->
+    <path fill="#b9d6e0" d="M0 590 60 574 110 584 190 530 230 548 262 500 300 540 350 520 420 452 470 520 530 548 590 530 640 470 700 400 742 462 800 520 870 500 930 540 1000 500 1062 446 1110 510 1180 536 1250 500 1330 548 1390 528 1440 500V900H0Z"/>
+    <path fill="#d6e8ee" d="M700 400 742 462 722 452 706 476 690 446 672 462 660 444ZM420 452 452 496 436 488 422 508 408 482 396 478ZM1062 446 1094 490 1078 482 1064 502 1048 478 1034 474ZM262 500 284 524 270 520 260 534 250 514Z"/>
+    <rect y="400" width="1440" height="250" fill="url(#haze)"/>
+    <path fill="#93bfc8" d="M0 650 90 620 150 634 240 590 300 612 350 572 420 616 500 636 580 604 640 624 720 640 800 584 860 618 940 634 1020 600 1090 628 1160 644 1250 590 1310 618 1380 630 1440 606V900H0Z"/>
+    <rect y="570" width="1440" height="150" fill="url(#haze)" opacity="0.75"/>
+
+    <!-- rolling grassland, each ridge catching a band of light -->
+    <path fill="#8ecb9c" d="M0 704C200 644 380 664 560 702S900 742 1100 682 1340 652 1440 690V900H0Z"/>
+    <path fill="#a9dbab" opacity="0.7" d="M0 704C200 644 380 664 560 702 380 672 200 660 0 716ZM1100 682C1220 648 1340 652 1440 690 1340 664 1220 662 1100 682Z"/>
+    <path fill="#74b874" d="M0 764C180 724 360 782 600 752S980 702 1200 760 1380 782 1440 762V900H0Z"/>
+    <path fill="#8ccb85" opacity="0.7" d="M600 752C800 722 980 702 1200 760 980 716 800 734 600 752ZM0 764C100 742 200 748 300 760 200 752 100 750 0 774Z"/>
+    <path fill="#5aa35c" d="M0 834C240 794 480 852 760 822S1200 802 1440 842V900H0Z"/>
+    <path fill="#6fb56c" opacity="0.7" d="M0 834C160 808 320 816 480 830 320 820 160 818 0 844ZM760 822C980 798 1200 802 1440 842 1200 812 980 808 760 822Z"/>
+  </svg>
+
   <header class="site-header">
-    <a class="brand" href="#top">P.ROJAS</a>
+    <a class="brand" href="#top">Paulo Rojas</a>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -22,40 +81,41 @@
   </header>
 
   <div class="hero" id="top">
-    <div class="hero-text">
-      <p class="eyebrow">Day 001 &middot; San Diego, CA</p>
-      <h1>Paulo Rojas</h1>
-      <p class="lede">Computer science undergrad at UC San Diego<span class="cursor">_</span></p>
-    </div>
+    <p class="eyebrow">San Diego, California</p>
+    <h1>Paulo Rojas</h1>
+    <div class="rule" aria-hidden="true"><span></span></div>
+    <p class="lede">Computer science undergrad at UC San Diego</p>
+    <p class="links">
+      <a href="https://github.com/paulo8rojas">GitHub</a>
+      <a href="https://www.linkedin.com/in/paulo-rojas-938396333">LinkedIn</a>
+    </p>
   </div>
 
   <main>
-    <section id="about">
-      <h2><span class="num">01</span> About</h2>
-      <div class="panel">
-        <!-- TODO: replace with your own bio -->
-        <p>I'm a CS student at UCSD who likes building things, from low-level systems projects to full-stack web apps.</p>
-      </div>
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <!-- TODO: replace with your own bio -->
+      <p>I'm a CS student at UCSD who likes building things, from low-level systems projects to full-stack web apps.</p>
     </section>
 
-    <section id="projects">
-      <h2><span class="num">02</span> Projects</h2>
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
       <ul class="projects">
-        <li class="panel">
+        <li>
           <div class="item-head">
             <a href="https://github.com/paulo8rojas/JobTracker">JobTracker</a>
             <span class="tag">Python / React</span>
           </div>
           <p>A full-stack job application tracker built with FastAPI, SQLModel, and React.</p>
         </li>
-        <li class="panel">
+        <li>
           <div class="item-head">
             <a href="https://github.com/paulo8rojas/wordle-widget">wordle-widget</a>
             <span class="tag">Desktop widget</span>
           </div>
           <p>A Wordle widget for Übersicht that pulls the daily puzzle and plays right on your desktop.</p>
         </li>
-        <li class="panel">
+        <li>
           <div class="item-head">
             <a href="https://github.com/paulo8rojas/cpu-cache-sim">cpu-cache-sim</a>
             <span class="tag">Rust</span>
@@ -65,11 +125,12 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2><span class="num">03</span> Contact</h2>
-      <div class="panel">
-        <p>Find me on <a href="https://github.com/paulo8rojas">GitHub</a>.</p>
-      </div>
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p class="links">
+        <a href="https://github.com/paulo8rojas">GitHub</a>
+        <a href="https://www.linkedin.com/in/paulo-rojas-938396333">LinkedIn</a>
+        </p>
     </section>
   </main>
 
